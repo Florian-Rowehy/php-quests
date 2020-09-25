@@ -5,7 +5,9 @@
         "Indiana Jones and the Temple of Doom" => ["Harrison Ford", "Kate Capshaw", "Jonathan Ke Quan"],
     ];
 
+    echo "<ul>";
     foreach($indianaMovies as $title=>$actors){
-        echo  "<p>Dans le film \"". $title . "\", les principaux acteurs sont : ". implode(", ", $actors) .". </p>";
+        echo  "<li> Dans le film \"". $title . "\", les principaux acteurs sont : ". implode(", ", $actors) .". </li>";
     }
+    echo "</ul>"
 ?>
