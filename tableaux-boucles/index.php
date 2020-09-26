@@ -1,13 +1,14 @@
 <?php
     $indianaMovies = [
-        "Indiana Jones and the Kingdom of the Crystal Skull" => ["Harrison Ford", "Cate Blanchett", "Karen Allen"],
-        "Indiana Jones and the Last Crusade" => ["Harrison Ford", "Sean Connery", "Denholm Elliott"],
-        "Indiana Jones and the Temple of Doom" => ["Harrison Ford", "Kate Capshaw", "Jonathan Ke Quan"],
+        "Indiana Jones and the Kingdom of the Crystal Skull" => 2008,
+        "Indiana Jones and the Last Crusade" => 1989,
+        "Indiana Jones and the Temple of Doom" => 1984,
     ];
+    asort($indianaMovies);
 
     echo "<ul>";
-    foreach($indianaMovies as $title=>$actors){
-        echo  "<li> Dans le film \"". $title . "\", les principaux acteurs sont : ". implode(", ", $actors) .". </li>";
+    foreach($indianaMovies as $title=>$releaseyear){
+        echo  "<li>". $releaseyear. " - " . $title .". </li>";
     }
     echo "</ul>"
 ?>
