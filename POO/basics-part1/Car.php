@@ -21,7 +21,7 @@ class Car {
         $this->currentSpeed += $speed;
     }
     public function brake(){
-        $reducedSpeed = $this->currentSpeed - 10;
+        $reducedSpeed = $this->currentSpeed - 20;
         $this->currentSpeed = $reducedSpeed <0? 0 : $reducedSpeed;
     }
     public function start(){
