@@ -20,7 +20,7 @@ require_once ("./public/_header.php");
         <input  type="text"  id="phonenumber"  name="user_phonenumber">
     </p>
     <p>
-        <label  for="subject">Phone Number :</label>
+        <label  for="subject">Subject :</label>
         <select  id="subject"  name="user_message_subject">
             <option value="Become the next president" selected >Become the next president</option>
             <option value="Meet the Spice Girls">Meet the Spice Girls</option>
@@ -31,8 +31,8 @@ require_once ("./public/_header.php");
         <label  for="message">Message :</label>
         <textarea  id="message"  name="user_message"></textarea>
     </p>
-    <p  class="button">
-        <button  type="submit">Send your message</button>
+    <p>
+        <button type="submit">Send your message</button>
     </p>
 </form>
 
