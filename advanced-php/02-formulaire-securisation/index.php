@@ -26,7 +26,7 @@ if($_POST){
     if(empty($name)) $errMessageName1 = "Please enter a name.";
     if(empty($surname)) $errMessageSurname1 = "Please enter a surname.";
     if(empty($email)) $errMessageEmail1 = "Please enter an email address.";
-    if(filter_var($email, FILTER_VALIDATE_EMAIL) ) $errMessageEmail2 = "Please use a valid email address. (ex:xxxx@xxx.com)";
+    if( !filter_var($email, FILTER_VALIDATE_EMAIL) ) $errMessageEmail2 = "Please use a valid email address. (ex:xxxx@xxx.com)";
 
     if(empty($phoneNumber)) $errMessagePhoneNumber1 = "Please enter a phone number.";
     if(empty($subject)) $errMessageSubject1 = "Please choose a subject between the following subject.";
@@ -36,7 +36,7 @@ if($_POST){
 }
 ?>
 
-<form  method="post">
+<form  method="post" action="formular-recuperation.php">
     <p>
         <label  for="name">Name :</label>
         <input  type="text"  id="name"  name="user_name" required value="<?=empty($name)? "" : clean_input($name)?>">
