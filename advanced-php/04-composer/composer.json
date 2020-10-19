@@ -1,0 +1,8 @@
+{
+    "name": "flo/quete_composer",
+    "description": "Projet quete composer",
+    "require": {},
+    "autoload": {
+        "psr-4": {"App\\": "src/"}
+    }
+}
