@@ -1,0 +1,7 @@
+{
+    "name": "flo/twig-views",
+    "description": "twig views quest project",
+    "require": {
+        "twig/twig": "^3.0"
+    }
+}

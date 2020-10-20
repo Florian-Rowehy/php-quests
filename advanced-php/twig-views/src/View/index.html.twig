@@ -1,0 +1,23 @@
+{% extends "base.html.twig" %}
+
+{% block title %}
+    <!-- j'aurai juste passé une variable, mais l'exercice demande de surcharger title... -->
+    <title> {{ title }} </title>
+{% endblock %}
+
+{% block content %}
+    <diV class="container">
+        <div class="row">
+            {% for product in products %}
+                <div class="card col-4" style="width: 18rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ product }}</h5>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+
+    </diV>
+{% endblock %}
