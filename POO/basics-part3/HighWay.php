@@ -1,5 +1,6 @@
 <?php
-abstract class HighWay {
+abstract class HighWay
+{
     /**
      * @var array
      */

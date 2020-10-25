@@ -1,14 +1,11 @@
 <?php
-require_once ("./HighWay.php");
+require_once __DIR__ . "/HighWay.php";
 
-class MotorWay extends HighWay {
-
-    public $currentVehicules;
-
+class MotorWay extends HighWay
+{
     public function __construct($nbLane, $maxSpeed)
     {
         parent::__construct(4, 130);
-        $this->currentVehicules = array();
     }
 
     public function addVehicule(Vehicule $vehicule): void
