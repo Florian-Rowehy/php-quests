@@ -17,10 +17,10 @@
         </div>
         <?php endif; ?>
         <div>
-            <?php foreach ($uploadedFiles as $filePath): ?>
-                <?php $file = getFileName($filePath) ?>
-                <img src="<?= '/uploads/' . $file  ?>" style="max-width: 100px">
-                <h2> <?= $file ?></h2>
+            <?php foreach ($uploadedFiles as $file): ?>
+                <?php $fileName = $file->getFilename() ?>
+                <img src="<?= '/uploads/' . $fileName  ?>" style="max-width: 100px">
+                <h2> <?= $fileName ?></h2>
                 <?php include __DIR__ . "/delete-form.php" ?>
             <?php endforeach; ?>
         </div>

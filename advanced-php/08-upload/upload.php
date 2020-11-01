@@ -21,7 +21,7 @@ if (isset($_FILES['files'])) {
         $tempName = $_FILES['files']['tmp_name'][$index];
         $fileSize = filesize($tempName);
 
-        //analyse l'extension & le Mime
+        //analyse l'extension & le MIME
         if (!$fileMimeMatch || !in_array($fileExtension, $allowedExtension)) {
             $uploadErrors[$fileName] = "Error $fileName: The file should be an image. Only jpg, png, gif formats are allowed.";
         } elseif ($fileSize > $sizeLimit) {
@@ -36,20 +36,16 @@ if (isset($_FILES['files'])) {
     }
 }
 
+//delete request handling
 if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["delete-file"])) {
     $fileName = cleanInput($_POST["delete-file"]);
     if ($fileName !== "") unlink(__DIR__.'/uploads/'.$fileName);
 }
 
-
+//find all files in uploads
 $uploadedFiles = new FilesystemIterator(__DIR__ . '/uploads');
 
 require_once __DIR__ . '/form.php';
-
-function getFileName(string $path): string
-{
-    return substr(strrchr($path, '/'), 1);
-}
 
 function cleanInput(string $str): string
 {
