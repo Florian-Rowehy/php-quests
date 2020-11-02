@@ -5,7 +5,7 @@
     </head>
     <body>
         <form method="post" action="upload.php" enctype="multipart/form-data">
-            <!-- <input type="hidden" name="MAX_FILE_SIZE" value="1000000"> -->
+            <input type="hidden" name="MAX_FILE_SIZE" value="1000000">
             <input name="files[]" type="file" multiple>
             <button>Submit!</button>
         </form>

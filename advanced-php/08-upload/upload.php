@@ -1,5 +1,4 @@
 <?php
-
 $allowedExtension = [".jpg", ".png", ".gif"];
 $allowedMime = "#image/(jpeg|png|gif)#";
 $sizeLimit = 10**6;
@@ -14,11 +13,12 @@ if (isset($_FILES['files'])) {
             continue;
         }
 
-        $fileMime = $_FILES['files']['type'][$index];
+        $tempName = $_FILES['files']['tmp_name'][$index];
+        $fileMime = mime_content_type($tempName);
         $fileMimeMatch = preg_match($allowedMime, $fileMime);
         $fileExtension = strrchr($fileName, '.');
+        var_dump($fileMime);
 
-        $tempName = $_FILES['files']['tmp_name'][$index];
         $fileSize = filesize($tempName);
 
         //analyse l'extension & le MIME
