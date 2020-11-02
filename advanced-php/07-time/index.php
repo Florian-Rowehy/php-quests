@@ -3,7 +3,7 @@ $presentTime = new DateTime();
 $destinationTime = DateTime::createFromFormat('Y-m-d H:i:s', '2020-12-25 07:00:00');
 
 $timeDiff = $destinationTime->diff($presentTime);
-$timeDiffStr = $timeDiff->format('years:%y months:%m days:%d hours:%i');
+$timeDiffStr = $timeDiff->format('years:%y months:%m days:%d hours:%H minutes:%i');
 $timeDiffMin = floor(abs($presentTime->getTimestamp() - $destinationTime->getTimestamp()) / 60);
 $nbLiters = ceil($timeDiffMin / 10**4);
 
